@@ -30,7 +30,7 @@ public:
     };
     bool IsUsed()
     {
-        return FlagSizeIsUsed & 1;
+        return (book)(FlagSizeIsUsed & 1);
     };
 
 }; //Size: 0x0020
