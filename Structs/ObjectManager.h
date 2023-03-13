@@ -39,7 +39,7 @@ public:
     char            pad_0880[600];      //0x0880
     cCameraManager* CameraManager;      //0x0AD8
     char            pad_0AE0[152];      //0x0AE0
-    cUIManager* UIManager;          //0x0B78
+    cUIManager*     UIManager;          //0x0B78
     char            pad_0B80[184];      //0x0B80
 }; //Size: 0x0C38
 static_assert(sizeof(cObjectManager) == 0xC38);
