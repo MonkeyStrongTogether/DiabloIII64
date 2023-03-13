@@ -16,7 +16,6 @@ public:
 	char			pad_0158[2784];			//0x0158
 }; //Size: 0x0C38
 static_assert(sizeof(cMemoryManager) == 0xC38);
-
 struct cDebugFile
 {
 public:
