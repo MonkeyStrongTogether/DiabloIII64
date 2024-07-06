@@ -1,0 +1,30 @@
+package Blizzard.Telemetry.Standard.Network;
+
+message UdpQualitySample {
+	message Metric {
+		optional float min = 1;
+		optional float avg = 2;
+		optional float max = 3;
+		optional float std_dev = 4;
+	}
+	optional string name = 1;
+	optional string address4 = 2;
+	optional string address6 = 5;
+	optional uint32 port = 3;
+	optional uint64 session_id = 4;
+	optional float sample_time_ms = 100;
+	optional uint64 bytes_sent = 101;
+	optional uint64 bytes_received = 102;
+	optional float roundtrip_time_smoothed_ms = 103;
+	optional float roundtrip_time_variance_estimate = 104;
+	optional uint32 packets_sent = 105;
+	optional uint32 packets_received = 106;
+	optional uint32 packets_lost_send = 107;
+	optional uint32 packets_lost_receive = 108;
+	optional uint32 out_of_order_or_duplicate_packets_received = 109;
+	optional float fixed_interpolation_delay_ms = 110;
+	optional .Blizzard.Telemetry.Standard.Network.UdpQualitySample.Metric time_since_prev_packet_ms = 111;
+	optional float bandwidth_up_bps = 112;
+	optional float bandwidth_down_bps = 113;
+	optional .Blizzard.Telemetry.Standard.Network.UdpQualitySample.Metric ping_ms = 114;
+}

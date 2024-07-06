@@ -1,0 +1,22 @@
+package Blizzard.Telemetry.Standard.Network;
+
+message TcpQualitySample {
+	message Metric {
+		optional float min = 1;
+		optional float avg = 2;
+		optional float max = 3;
+		optional float std_dev = 4;
+	}
+	optional string name = 1;
+	optional string address4 = 2;
+	optional string address6 = 5;
+	optional uint32 port = 3;
+	optional uint64 session_id = 4;
+	optional float sample_time_ms = 100;
+	optional uint64 bytes_sent = 101;
+	optional uint64 bytes_received = 102;
+	optional uint32 messages_sent = 105;
+	optional uint32 messages_received = 106;
+	optional .Blizzard.Telemetry.Standard.Network.TcpQualitySample.Metric time_since_prev_message_ms = 111;
+	optional .Blizzard.Telemetry.Standard.Network.TcpQualitySample.Metric ping_ms = 114;
+}

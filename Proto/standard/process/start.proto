@@ -1,0 +1,5 @@
+package Blizzard.Telemetry.Standard.Process;
+
+message Start {
+	optional uint32 pid = 3;
+}

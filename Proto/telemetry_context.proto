@@ -1,0 +1,39 @@
+package Blizzard.Telemetry;
+
+message Context {
+	message HostInfo {
+		optional string id = 1;
+		optional string name = 2;
+		optional string type = 3;
+		optional string site = 4;
+		optional string platform = 5;
+		optional string arch = 10;
+		optional string os_name = 20;
+		optional string os_version = 21;
+		repeated string tag = 100;
+	}
+	message ProgramInfo {
+		message SdkInfo {
+			optional string name = 1;
+			optional string version = 2;
+		}
+		optional string id = 1;
+		optional string name = 2;
+		optional string version = 3;
+		optional .Blizzard.Telemetry.Context.ProgramInfo.SdkInfo sdk = 100;
+	}
+	message TraceInfo {
+		optional string trace_id = 1;
+		optional string span_id = 2;
+		optional string parent_span_id = 3;
+	}
+	optional .Blizzard.Telemetry.Context.ProgramInfo program = 1;
+	optional uint64 source_time = 2;
+	optional int64 time_offset = 3;
+	optional .Blizzard.Telemetry.Context.HostInfo host = 4;
+	optional .Blizzard.Telemetry.Context.TraceInfo trace = 5;
+	optional string session_id = 6;
+	optional uint32 retry_count = 7;
+	optional uint64 account = 8;
+	optional uint64 bnet_id = 9;
+}

@@ -1,0 +1,6 @@
+package Blizzard.Telemetry.Standard.Process;
+
+message Finish {
+	optional uint32 pid = 1;
+	optional uint32 exit_code = 2;
+}

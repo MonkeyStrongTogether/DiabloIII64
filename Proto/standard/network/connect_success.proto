@@ -1,0 +1,11 @@
+package Blizzard.Telemetry.Standard.Network;
+
+message ConnectSuccess {
+	optional string name = 1;
+	optional string address4 = 2;
+	optional string address6 = 5;
+	optional string host = 102;
+	optional uint32 port = 3;
+	optional uint32 latency_ms = 4;
+	optional uint64 session_id = 6;
+}

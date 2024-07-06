@@ -1,0 +1,18 @@
+package Blizzard.Telemetry;
+import "telemetry_context.proto";
+
+message Envelope {
+	message FlowInfo {
+		optional .Blizzard.Telemetry.Envelope.FlowType type = 1;
+		optional float chance = 2;
+	}
+	enum FlowType {
+		SAMPLING = 0;
+		PARTICIPATION = 1;
+	}
+	optional .Blizzard.Telemetry.Context context = 1;
+	optional string package_name = 2;
+	optional string message_name = 3;
+	optional bytes contents = 4;
+	optional .Blizzard.Telemetry.Envelope.FlowInfo flow = 10;
+}

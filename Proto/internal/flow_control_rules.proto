@@ -1,0 +1,8 @@
+package Blizzard.Telemetry.Internal.FlowControl;
+
+message CachedRule {
+	optional string etag = 1;
+	optional uint64 validated_time = 2;
+	optional string csv = 10;
+	optional string endpoint = 20;
+}

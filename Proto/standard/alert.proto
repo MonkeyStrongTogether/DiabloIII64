@@ -1,0 +1,17 @@
+package Blizzard.Telemetry.Standard;
+
+message Alert {
+	optional string condition_id = 1;
+	optional string qualifier = 2;
+	optional string summary = 3;
+	optional string description = 4;
+	optional uint64 timestamp_utc = 5;
+	optional uint32 severity = 6;
+	optional string agent = 7;
+	repeated string environments = 8;
+	repeated string hostnames = 9;
+	optional string payload = 10;
+	repeated string regions = 11;
+	repeated string services = 12;
+	repeated string sites = 13;
+}

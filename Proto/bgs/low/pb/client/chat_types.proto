@@ -1,0 +1,12 @@
+package bgs.protocol.channel.v1;
+import "bgs/low/pb/client/channel_types.proto";
+
+message ChatChannelState {
+	optional string identity = 1;
+	optional fixed32 locale = 3;
+	optional bool public = 4 [default = false];
+	optional uint32 bucket_index = 5;
+	extend .bgs.protocol.channel.v1.ChannelState {
+		optional .bgs.protocol.channel.v1.ChatChannelState channel_state = 100;
+	}
+}

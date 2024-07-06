@@ -1,0 +1,6 @@
+package Blizzard.Telemetry.D3;
+import "telemetry_extensions.proto";
+
+message GameConvertedToPublic {
+	optional string game_tag = 1;
+}
